@@ -1,30 +1,26 @@
 <template>
   <div id="app">
-    <div 
-    v-for="node in tree" 
-    v-bind:key="node.id">
-    <TreeBrowser
-      :node="node"
-     />
-     </div>
+    <div v-for="node in tree" v-bind:key="node.id">
+      <TreeBrowser :node="node" />
+    </div>
   </div>
 </template>
 
 <script>
-import TreeBrowser from './components/TreeBrowser.vue'
-import treeData from './resources/tree.json'
+import TreeBrowser from "./components/TreeBrowser.vue";
+import treeData from "./resources/tree.json";
 
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-        tree: treeData
-    }
+      tree: treeData,
+    };
   },
   components: {
-    TreeBrowser
-  }
-}
+    TreeBrowser,
+  },
+};
 </script>
 
 <style>
