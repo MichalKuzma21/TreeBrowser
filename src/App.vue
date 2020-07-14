@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div 
+    v-for="node in tree" 
+    v-bind:key="node.id">
+    <TreeBrowser
+      :node="node"
+     />
+     </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TreeBrowser from './components/TreeBrowser.vue'
+import treeData from './resources/tree.json'
 
 export default {
   name: 'App',
+  data() {
+    return {
+        tree: treeData
+    }
+  },
   components: {
-    HelloWorld
+    TreeBrowser
   }
 }
 </script>
