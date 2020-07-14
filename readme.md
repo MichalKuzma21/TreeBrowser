@@ -4,5 +4,6 @@ An application that displays a expandable tree
 ```
 git clone https://github.com/MichalKuzma21/TreeBrowser
 cd TreeBrowser
+npm install
 npm run serve
 ```
